@@ -6,6 +6,10 @@ HeLa combines **Mitosis** for orchestration and reasoning with **Genome** for pe
 
 The [distribution repository](https://github.com/Hela-Ecosystem/hela-mcp-ecosystem) provides pinned source snapshots, eight installation profiles, client configuration generators, and a static documentation website with English and Indonesian navigation. Tool availability depends on the selected profile and enabled features; use MCP `tools/list` or the [generated profile reference](https://hela.my.id/library/docs/generated-profile-counts.html) rather than a fixed ecosystem-wide total.
 
+## Creator
+
+HeLa Ecosystem was created by **Azzar Budiyanto**. The cellular architecture, organelle model, runtime, installation profiles, and integration tooling are designed and maintained by Azzar as an independent open-source project.
+
 ## Current source snapshot
 
 The distribution snapshot is **v1.5.3**, with cell packages **3.0.0** and runtime **1.2.0**. See the [release notes](https://hela.my.id/library/RELEASE_NOTES.html) for source pins and verification limits. The runtime starts no cells during discovery; the first tool call starts only its target cell.
