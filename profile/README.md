@@ -6,13 +6,21 @@ HeLa combines **Mitosis** for orchestration and reasoning with **Genome** for pe
 
 The [distribution repository](https://github.com/Hela-Ecosystem/hela-mcp-ecosystem) provides pinned source snapshots, eight installation profiles, client configuration generators, and a static documentation website with English and Indonesian navigation. Tool availability depends on the selected profile and enabled features; use MCP `tools/list` or the [generated profile reference](https://hela.my.id/library/docs/generated-profile-counts.html) rather than a fixed ecosystem-wide total.
 
+Cell tools are namespaced by default (`hela_membrane_read_file`), so a cell can never shadow a name the host already exposes; `HELA_NAMESPACE_TOOLS=0` restores bare names for clients that pin them.
+
 ## Creator
 
 HeLa Ecosystem was created by **Azzar Budiyanto**. The cellular architecture, organelle model, runtime, installation profiles, and integration tooling are designed and maintained by Azzar as an independent open-source project.
 
 ## Current source snapshot
 
-The distribution snapshot is **v1.5.3**, with cell packages **3.0.0** and runtime **1.2.0**. See the [release notes](https://hela.my.id/library/RELEASE_NOTES.html) for source pins and verification limits. The runtime starts no cells during discovery; the first tool call starts only its target cell.
+<!-- hela:profile:start -->
+Snapshot **v1.9.27** · runtime **1.3.7** · cell releases **3.0.5 – 4.0.9**.
+
+The ten cells are separate upstream projects under their own licences: **6** GPL-3.0-or-later (HeLa Mitosis, HeLa Genome, HeLa Membrane, HeLa Ribosome, HeLa Enzyme, HeLa Plastid) and **4** MIT (HeLa Nucleus, HeLa Cytosol, HeLa Phenotype, HeLa Receptor). The installer, runtime and documentation are MIT; this table of licences is generated from `config/inventory.json`, so it cannot drift from what the installer ships.
+<!-- hela:profile:end -->
+
+See the [release notes](https://hela.my.id/library/RELEASE_NOTES.html) for source pins and verification limits. The runtime starts no cells during discovery; the first tool call starts only its target cell.
 
 ## Repositories
 
@@ -55,6 +63,6 @@ The default profile is `dev-workspace`, not `all`. Installation writes a private
 - [Searchable document library](https://hela.my.id/library.html) · [Navigasi Bahasa Indonesia](https://hela.my.id/id/library.html)
 - [Profiles and configuration](https://hela.my.id/profiles.html) · [Troubleshooting](https://hela.my.id/troubleshooting.html)
 - [Full documentation text](https://hela.my.id/llms-full.txt)
-- License: MIT (per subproject)
+- Licence: the installer, runtime and documentation are MIT; each cell keeps its own, listed above
 
 Named in respectful recognition of Henrietta Lacks (1920-1951) and the immortal scientific legacy of HeLa cells.

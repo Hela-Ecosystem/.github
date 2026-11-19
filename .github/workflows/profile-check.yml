@@ -1,0 +1,32 @@
+name: Profile facts
+
+# The organization profile is the front door, and it has silently advertised a
+# two-release-old snapshot and the wrong licence split before. The block is
+# generated from the ecosystem inventory; this workflow fails when it drifts.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Daily: the profile reads the ecosystem default branch, so a release that
+    # forgets the profile shows up here within a day.
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Profile matches the ecosystem inventory
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check the generated block and the hand-written claims
+        run: node scripts/sync-profile.mjs --check
