@@ -15,7 +15,7 @@ HeLa Ecosystem was created by **Azzar Budiyanto**. The cellular architecture, or
 ## Current source snapshot
 
 <!-- hela:profile:start -->
-Snapshot **v1.9.27** · runtime **1.3.7** · cell releases **3.0.5 – 4.0.9**.
+Snapshot **v1.11.26** · runtime **1.4.5** · cell releases **3.0.5 – 4.3.4**.
 
 The ten cells are separate upstream projects under their own licences: **6** GPL-3.0-or-later (HeLa Mitosis, HeLa Genome, HeLa Membrane, HeLa Ribosome, HeLa Enzyme, HeLa Plastid) and **4** MIT (HeLa Nucleus, HeLa Cytosol, HeLa Phenotype, HeLa Receptor). The installer, runtime and documentation are MIT; this table of licences is generated from `config/inventory.json`, so it cannot drift from what the installer ships.
 <!-- hela:profile:end -->
